@@ -9,9 +9,10 @@ $(document).ready(function() {
 		e.preventDefault();
 		
 		var itemName = $.trim($item.val());
+		var itemNameLowerCase = itemName.toLowerCase();
 	
 		if (itemName.length) {
-			$list.append("<li>" + itemName + "</li>");
+			$list.append("<input type='checkbox' name='item' value='" + itemNameLowerCase + "' />" + itemName + "<br />");
 			$item.val("");
 		}
 		else {
@@ -36,17 +37,14 @@ $(document).ready(function() {
 			*/
 			$form.submit();
 		});
-		
+
+	$("input[type=checkbox]").on("click", function() {
+		$(this).toggleClass("checked-item");
+		});
+
+	/*		
 	$list.on('click', 'li', function(){
    		$(this).toggleClass('checked-item');
 	});
-	
-	/* Put some JavaScript here! */
-
-	/* check for length > 0 -- not empty 
-
-	jQuery - trim
-
 	*/
-
 })
