@@ -49,25 +49,70 @@ table {
 
 /* CSS reset ends here */
 
+body {
+	background: lightgray;
+}
+
+h1 {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	margin-bottom: 25px;
+}
+
+#everything {
+	background: cornflowerblue;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	width: 400px;
+}
+
 p {
 	color: black;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
+}
+
+#new-item {
+	font-size: 16px;
+	height: 25px;
+	width: 200px;
 }
 
 button {
-	width: 50px;
+	font-size: 16px;
+	height: 25px;
+	width: 75px;
 	background-color: #f0f0f0;
-	border: 1px solid blue;
-	border-radius: 5px;
+	border: 1px solid gray;
 	margin-left: 2px;
 }
 
-.item {
-	
+#addform {
+	margin-bottom: 10px;
+}
+
+#editform, #removeform {
+	display: inline;
+	margin: 5px 5px;		/* margin between input field and edit + remove buttons? */
+}
+
+.item, .item-editing {
+	display: block;
+	font-family: "Varela Round", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin-top: 5px;
 }
 
 .checked-item {
 	color: #999999;
 	text-decoration: line-through;
+}
+
+#list {
+	margin-top: 25px;
+}
+
+#error {
+	display: none;
 }

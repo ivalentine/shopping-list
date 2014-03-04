@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="main.css">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="shopping-list.js"></script>
 		<title>Shopping list</title>
 	</head>
 	<body>
-	<div id="input">
-		<form id="addform" action="">
-			<input type="text" id="new-item" name="new-item" placeholder="Item" autofocus required>
-			<button id="add-item" name="add-item" type="button">Add &#187;</button>
-		</form>
-	</div>
-	<div id="list">
-		<form id="itemlist" action="">
-			<!-- added items go here -->
-		</form>
-	</div>
-	
+		<div id="everything">
+			<div id="header">
+				<h1>Shopping list</h1>
+			</div>
+			<div id="input">
+				<form id="addform" action="">
+					<input type="text" id="new-item" name="new-item" placeholder="Item" autofocus required>
+					<button id="add-item" name="add-item" type="button">Add &#187;</button>
+				</form>
+				<form id="editform" action="">
+					<button id="edit-item" name="edit-item" type="button">Edit</button>
+				</form>
+				<form id="removeform" action="">
+					<button id="remove-item" name="remove-item" type="button">Remove</button>
+				</form>
+			</div>
+			<div id="list">
+				<form id="itemlist" action="">
+					<!-- added items go here -->
+				</form>
+				<div id="error"><p>Please enter a valid item name.</p></div>
+			</div>
+		</div>
 	<!--
-	<ul id="list">
-	</ul>
-	-->
 	
-	<!-- add items manually
-	
-	button to remove checked items
-	
-	edit item
+	disable/enable edit button based on checked items
+		
+	improve styling
 	
 	-->
 	
